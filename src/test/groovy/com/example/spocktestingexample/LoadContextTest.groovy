@@ -10,7 +10,7 @@ class LoadContextTest extends Specification {
     @Autowired
     private ApplicationContext applicationContext
 
-    def "SpringBoot test"() {
+    def "Spring Boot application "() {
         expect:
         applicationContext != null
     }

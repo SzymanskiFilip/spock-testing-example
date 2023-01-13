@@ -3,6 +3,7 @@ services:
   server:
     container_name: server
     build: .
+    command: ["./mvnw", "spring-boot:run", "-Dspring-boot.run.arguments=--host=db"]
     ports:
       - "8080:8080"
     volumes:
@@ -22,12 +23,6 @@ services:
       POSTGRES_PASSWORD: p
     ports:
       - "5432:5432"
-  server_test:
-    build: .
-    volumes:
-      - .:/app
-    depends_on:
-      - database
 
 volumes:
   init.sql:
