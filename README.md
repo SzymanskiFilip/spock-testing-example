@@ -27,8 +27,5 @@ If you want to run the tests in the container go to the **Scripts** section of t
 ## Scripts
 The scripts in this projects are:
 * clean-volumes.sh
-* run-tests.sh
 
 The clean volumes script cleans the volumes of the container. By doing that postgres will re-initialize the **init.sql** file so all changes you have made to that sql script will be applied.
-
-The run-tests script **starts the database first** then cleans the project and runs the tests. After the tests the script stops the docker servcies. Which are the app itself **and the database container**.
